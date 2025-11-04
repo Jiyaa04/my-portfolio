@@ -17,7 +17,7 @@ const Research = () => {
     {
       title: "Virtual Whiteboard Using Computer Vision",
       description: "Creating an interactive virtual whiteboard system using computer vision and gesture recognition for remote collaboration and teaching.",
-      status: "Presented",
+      status: "Under Review",
       conference: "CTDP",
       keywords: ["Computer Vision", "Gesture Recognition", "HCI"],
       link: "https://drive.google.com/file/d/1CvkXZBBpl6FravMqmXC7TbfpNf8pwpap/view?usp=drivesdk",

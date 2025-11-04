@@ -10,7 +10,7 @@ const Education = () => {
       degree: "B.Tech in Artificial Intelligence & Data Science",
       institution: "PIEMR, Indore",
       duration: "2022 - 2026",
-      grade: "CGPA: 7.71",
+      grade: "CGPA: 7.4",
       color: "text-primary",
       bgColor: "from-primary/10 to-primary/5",
     },

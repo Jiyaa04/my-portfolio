@@ -9,7 +9,7 @@ const Projects = () => {
     {
       title: "AQI Prediction Model",
       subtitle: "Time Series Forecasting using LSTM",
-      description: "Built an LSTM-based deep learning model to predict Air Quality Index with high accuracy, helping environmental monitoring.",
+      description: "Built an FB - Prophet deep learning model to predict Air Quality Index with high accuracy, helping environmental monitoring.",
       tech: ["Python", "LSTM", "TensorFlow", "Data Analysis"],
       gradient: "from-primary/10 to-primary/5",
       borderColor: "border-primary/30",
