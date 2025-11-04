@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Neural Network / Python Theme - Dark Matrix Style */
+    --background: 220 35% 6%;
+    --foreground: 150 100% 85%;
+
+    --card: 220 30% 8%;
+    --card-foreground: 150 100% 85%;
+
+    --popover: 220 35% 10%;
+    --popover-foreground: 150 100% 85%;
+
+    /* Matrix Green - Primary (Python/Terminal) */
+    --primary: 150 100% 45%;
+    --primary-foreground: 220 35% 6%;
+    --primary-light: 150 80% 65%;
+    --primary-glow: 150 100% 55%;
+
+    /* Electric Cyan - Secondary (Neural connections) */
+    --secondary: 180 100% 50%;
+    --secondary-foreground: 220 35% 6%;
+    --secondary-light: 180 80% 70%;
+    --secondary-glow: 180 100% 60%;
+
+    /* Neon Blue - Accent */
+    --accent: 210 100% 55%;
+    --accent-foreground: 220 35% 6%;
+    --accent-light: 210 80% 75%;
+
+    --muted: 220 20% 15%;
+    --muted-foreground: 150 30% 55%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 150 50% 15%;
+    --input: 220 25% 12%;
+    --ring: 150 100% 45%;
+
+    --radius: 0.5rem;
+    
+    /* Neural Network Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(150 100% 45%) 0%, hsl(180 100% 50%) 100%);
+    --gradient-neural: linear-gradient(135deg, hsl(220 35% 6%) 0%, hsl(150 50% 10%) 50%, hsl(180 50% 10%) 100%);
+    --gradient-code: linear-gradient(180deg, hsl(220 35% 8%) 0%, hsl(150 30% 8%) 100%);
+    
+    /* Glowing Effects */
+    --shadow-soft: 0 4px 20px hsl(150 100% 45% / 0.1);
+    --shadow-medium: 0 8px 30px hsl(150 100% 45% / 0.2);
+    --shadow-glow: 0 0 40px hsl(150 100% 45% / 0.4);
+    --shadow-cyan-glow: 0 0 40px hsl(180 100% 50% / 0.4);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-family: 'Poppins', sans-serif;
+    background-image: 
+      radial-gradient(circle at 10% 20%, hsl(150 100% 45% / 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 90% 80%, hsl(180 100% 50% / 0.03) 0%, transparent 50%);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  code, pre, .font-mono {
+    font-family: 'Fira Code', 'Courier New', monospace;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+  
+  .soft-shadow {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .medium-shadow {
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .glow-shadow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .neural-card {
+    @apply bg-card/90 border border-primary/30 rounded-xl backdrop-blur-sm;
+    box-shadow: 0 4px 20px hsl(150 100% 45% / 0.1), inset 0 1px 0 hsl(150 100% 45% / 0.1);
+  }
+  
+  .terminal-glow {
+    box-shadow: 0 0 20px hsl(150 100% 45% / 0.3);
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  .animate-pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulseGlow {
+    0%, 100% {
+      box-shadow: 0 0 10px hsl(150 100% 45% / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 30px hsl(150 100% 45% / 0.6);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .neural-grid {
+    background-image: 
+      linear-gradient(hsl(150 50% 15% / 0.3) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(150 50% 15% / 0.3) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+  
+  .code-lines {
+    position: relative;
+  }
+  
+  .code-lines::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, hsl(150 100% 45%) 0%, hsl(180 100% 50%) 100%);
+    box-shadow: 0 0 10px hsl(150 100% 45% / 0.5);
+  }
+}
