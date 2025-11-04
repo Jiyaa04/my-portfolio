@@ -16,7 +16,7 @@ const AchievementMarquee = () => {
     },
     {
       icon: Trophy,
-      text: "🏅 Top Performer – Data Science & ML Hackathon, IIITM Gwalior",
+      text: "🏅 Top Performers – Data Science & ML Hackathon, IIITM Gwalior",
       color: "text-accent",
     },
     {

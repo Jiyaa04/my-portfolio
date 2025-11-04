@@ -24,7 +24,7 @@ const GalleryMarquee = () => {
     {
       image: iiitmHackathon,
       title: "IIITM Gwalior Hackathon",
-      subtitle: "Top Performer",
+      subtitle: "Top Performers",
       color: "accent",
     },
     {
@@ -36,7 +36,7 @@ const GalleryMarquee = () => {
     {
       image: anchoringEvent,
       title: "College Event Hosting",
-      subtitle: "Head Coordinator",
+      subtitle: "Head Anchoring Coordinator",
       color: "secondary",
     },
     {
